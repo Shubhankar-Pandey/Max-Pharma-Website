@@ -29,7 +29,7 @@ function ProfileSection() {
             </a>
 
             <a
-              href="https://wa.me/919120371404?text=Hello%20Max%20Pharma"
+              href="https://wa.me/916387873074?text=Hello%20Max%20Pharma"
               target="_blank"
               rel="noopener noreferrer">
                 <button className="text-sm md:text-base text-green-600 border border-green-600 px-4 py-2 rounded-full hover:bg-green-600 hover:text-white transition-colors">
