@@ -6,18 +6,23 @@ import OurLocation from "./Components/OurLocation";
 import PatientReview from "./Components/PatientReview";
 import Footer from "./Components/Footer";
 import ChatWidget from "./Components/ChatWidget";
+import Slider from "./Components/Slider"
 
 function App() {
   return (
     <div className="w-full min-h-screen bg-[#ffff] scroll-smooth">
-      <Navbar />
+      <Navbar></Navbar>
 
-      <section id="home">
-        <HeroSection />
+      <section>
+        <Slider></Slider>
       </section>
 
       <section id="profile">
         <ProfileSection />
+      </section>
+
+      <section id="home">
+        <HeroSection />
       </section>
 
       <section id="services">
