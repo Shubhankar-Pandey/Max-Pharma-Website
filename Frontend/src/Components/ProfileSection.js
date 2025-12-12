@@ -22,7 +22,7 @@ function ProfileSection() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
-            <a href="tel:+919120371404">
+            <a href="tel:+916387873074">
                 <button className="text-sm md:text-base text-white bg-blue-600 px-4 py-2 rounded-full hover:bg-blue-800 shadow-sm transition-colors">
                   Call Now
                 </button>
