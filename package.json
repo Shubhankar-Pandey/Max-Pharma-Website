@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cd Frontend && npm ci && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/Shubhankar-Pandey/Max-Pharma-Website/issues"
   },
-  "homepage": "https://github.com/Shubhankar-Pandey/Max-Pharma-Website#readme"
+  "homepage": "https://github.com/Shubhankar-Pandey/Max-Pharma-Website#readme",
+  "private": true
 }
