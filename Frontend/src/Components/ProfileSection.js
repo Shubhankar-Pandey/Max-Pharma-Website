@@ -57,7 +57,7 @@ function ProfileSection() {
             />
             <div className="text-center space-y-1">
               <h3 className="text-2xl font-semibold text-gray-900">
-                Rahul Tiwari
+                Dr. Rahul Tiwari
               </h3>
               <p className="text-sm text-gray-500">Consultant Pharmacist</p>
             </div>

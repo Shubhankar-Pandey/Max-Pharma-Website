@@ -1,66 +1,87 @@
 import { useState } from "react";
 
+import p1 from "../Assets/p1.jpeg"
+import p2 from "../Assets/p2.jpeg"
+import p3 from "../Assets/p3.jpeg"
+import p4 from "../Assets/p4.jpeg"
+import p5 from "../Assets/p5.jpeg"
+import p6 from "../Assets/p6.jpeg"
+import p7 from "../Assets/p7.jpeg"
+import p8 from "../Assets/p8.jpeg"
+import p9 from "../Assets/p9.jpeg"
+import p10 from "../Assets/p10.jpeg"
+
 function PatientReview() {
   const patients = [
     {
-      image: "", // add image URL here
-      name: "Patient Name 1",
-      tag: "Recovered from XYZ",
-      review: "Lorem ipsum dolor sit amet 1. Dolor sit amet, consectetur adipiscing elit.",
+      image: p1,
+      name: "Adv. Satendra Patel",
+      tag: "Recovered from Glucoma",
+      review:
+        "When I was diagnosed with glaucoma I was worried about losing vision, but Max Pharma guided me with calm expertise from day one. The consultation was thorough, the doctor explained each test and the treatment plan in plain language, and they set realistic expectations. The eye medications they prescribed were explained clearly and the follow-up schedule was meticulous. Within a few weeks my intraocular pressure improved and the discomfort reduced noticeably. The staff were always available for questions and they treated me with genuine empathy. I truly felt cared for — Max Pharma gave me confidence and excellent clinical care throughout my recovery.",
     },
     {
-      image: "",
-      name: "Patient Name 2",
+      image: p2,
+      name: "Sameer Patel",
+      tag: "Recovered from Sleep Disk",
+      review:
+        "After struggling with a slipped disk that ruined my sleep, Max Pharma provided a personalized, multi-pronged plan that brought relief faster than I expected. They combined careful medication, guided physiotherapy, and clear at-home exercises that were tailored to my condition. The therapists monitored my progress weekly and modified exercises to reduce pain and restore movement. I began sleeping through the night again and my mobility improved steadily. The team explained posture, ergonomics, and preventative steps so I could avoid re-injury. Their professionalism and follow-up care made a big difference — I’m back to normal activities and very grateful for their help.",
+    },
+    {
+      image: p3,
+      name: "Yogendra Prajapati",
+      tag: "Diabetic Patient",
+      review:
+        "Managing diabetes felt overwhelming until I started treatment at Max Pharma — their approach is clinical, supportive, and practical. The nurses who administered my injections and drips were calm, skilled, and explained every step so I felt comfortable. The doctors reviewed my blood sugar trends closely and adjusted treatment in a measured way that improved my levels safely. I received helpful dietary and lifestyle advice that complemented the medical care and made daily management easier. Their follow-up and timely adjustments gave me stability and more energy throughout the day. I couldn’t be happier with the attentive, evidence-based care I received here.",
+    },
+    {
+      image: p4,
+      name: "Shivani Thakur",
+      tag: "PCOS (Polycystic Ovary Syndrome)",
+      review:
+        "Dealing with PCOS was stressful, but Max Pharma’s team listened carefully and built a compassionate, individualized treatment plan. They explained hormonal tests, medication options, and lifestyle changes so I fully understood each step. The doctors coordinated with nutrition and wellness advice to help manage symptoms and regulate cycles. Over a few months I saw meaningful improvements in symptoms, energy, and mood. Appointments were handled sensitively and the staff made sure I felt comfortable discussing intimate concerns. I appreciate their holistic, respectful approach — it truly made a positive change in my life.",
+    },
+    {
+      image: p5,
+      name: "Renu Pandey",
       tag: "Regular Checkup",
-      review: "Lorem ipsum dolor sit amet 2. Sed do eiusmod tempor incididunt ut labore.",
+      review:
+        "I come to Max Pharma for my regular health checkups and they always deliver thorough, reassuring care. Each visit includes a detailed check, clear explanation of results, and practical advice for preventive health. The staff are punctual, courteous, and make the whole process smooth and stress-free. They flag potential issues early and suggest sensible next steps without unnecessary procedures. I feel confident that my health is being monitored by professionals who care. For routine health maintenance, Max Pharma is dependable and highly recommended.",
     },
     {
-      image: "",
-      name: "Patient Name 3",
-      tag: "Dental Care",
-      review: "Lorem ipsum dolor sit amet 3. Ut enim ad minim veniam, quis nostrud.",
+      image: p6,
+      name: "Shivansh Kashyap",
+      tag: "Sports Injury, Threapy",
+      review:
+        "After a sports injury I turned to Max Pharma for therapy and their multidisciplinary care got me back on my feet. The physiotherapists created a clear rehab plan with progressive exercises focused on strength and flexibility. Each session was hands-on, instructive, and updated based on my improving condition. Pain decreased significantly and my range of motion returned faster than I expected. The coordination between doctors and therapists ensured safe, effective recovery without rushing the process. Their expertise and encouragement helped me return to sport confidently — I highly recommend their sports injury services.",
     },
     {
-      image: "",
-      name: "Patient Name 4",
-      tag: "Eye Treatment",
-      review: "Lorem ipsum dolor sit amet 4. Duis aute irure dolor in reprehenderit.",
+      image: p7,
+      name: "Yogesh Narayan",
+      tag: "Seborrheic Dermatitis",
+      review:
+        "I had persistent skin flare-ups from seborrheic dermatitis and Max Pharma provided fast, professional relief. The dermatologist diagnosed the triggers accurately and prescribed a balanced treatment plan including topical care and lifestyle tips. The clinic explained how to manage flare-ups and recommended gentle skincare routines that actually worked for my skin type. Over several weeks the redness and itching reduced dramatically and my scalp became much calmer. Staff followed up to tweak treatment when needed and were always responsive to questions. Their caring, knowledgeable approach restored my confidence and comfort.",
     },
     {
-      image: "",
-      name: "Patient Name 5",
-      tag: "Surgery",
-      review: "Lorem ipsum dolor sit amet 5. Excepteur sint occaecat cupidatat non proident.",
+      image: p8,
+      name: "Adv. Avanish Tiwari",
+      tag: "Thyphoid",
+      review:
+        "When I was diagnosed with typhoid I needed quick, reliable treatment and Max Pharma exceeded my expectations. They admitted me promptly, ran the necessary tests, and started targeted antibiotic therapy without delay. The nursing team monitored my vitals and hydration closely and provided supportive care that helped me recover faster. Doctors explained the medication plan and recovery milestones clearly so I knew what to expect each day. Their follow-up advice on diet and precautions prevented relapses and sped up my return to normal activity. I’m grateful for their calm, effective emergency and inpatient care.",
     },
     {
-      image: "",
-      name: "Patient Name 6",
-      tag: "Physiotherapy",
-      review: "Lorem ipsum dolor sit amet 6. Sunt in culpa qui officia deserunt mollit.",
+      image: p9,
+      name: "Sarvan Nigam",
+      tag: "Fatty Liver",
+      review:
+        "My fatty liver diagnosis felt intimidating, but Max Pharma provided a structured plan that was both practical and achievable. The doctor explained the condition in simple terms and set realistic goals for weight, diet, and medication. They provided a tailored nutrition plan and monitored liver markers regularly to track progress. Over a few months my test results improved and I felt more energetic overall. The staff kept me motivated with clear milestones and friendly check-ins. Their measured, evidence-based approach helped me make sustainable changes and improved my liver health significantly.",
     },
     {
-      image: "",
-      name: "Patient Name 7",
-      tag: "Cardiology",
-      review: "Lorem ipsum dolor sit amet 7. Curabitur non nulla sit amet nisl tempus.",
-    },
-    {
-      image: "",
-      name: "Patient Name 8",
-      tag: "Neurology",
-      review: "Lorem ipsum dolor sit amet 8. Vivamus suscipit tortor eget felis porttitor.",
-    },
-    {
-      image: "",
-      name: "Patient Name 9",
-      tag: "Orthopedic",
-      review: "Lorem ipsum dolor sit amet 9. Pellentesque in ipsum id orci porta dapibus.",
-    },
-    {
-      image: "",
-      name: "Patient Name 10",
-      tag: "Emergency Care",
-      review: "Lorem ipsum dolor sit amet 10. Vestibulum ac diam sit amet quam vehicula.",
+      image: p10,
+      name: "Sachin Singh",
+      tag: "Ankylosing Spondylitis",
+      review:
+        "Living with ankylosing spondylitis is challenging, but the team at Max Pharma delivered empathetic, expert care that improved my quality of life. They combined medication management with physiotherapy and practical lifestyle advice to reduce pain and preserve mobility. The specialists explained the long-term treatment strategy clearly and adjusted therapy based on my response. Regular monitoring and tailored exercise plans helped maintain flexibility and reduce flare-ups. The staff’s patience and follow-through made me feel supported every step of the way. I highly recommend Max Pharma for anyone seeking comprehensive care for chronic musculoskeletal conditions.",
     },
   ];
 
@@ -114,7 +135,7 @@ function PatientReview() {
               visiblePatients.map((patient, index) => 
                 (
                     <article
-                      key={index}
+                      key={patient.name}
                       className="relative bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow p-6 flex flex-col gap-4 border border-slate-100">
                     
                       {/* Top Accent Line */}
@@ -127,6 +148,7 @@ function PatientReview() {
                             <img
                               src={patient.image}
                               alt={patient.name}
+                              loading="lazy"
                               className="h-12 w-12 rounded-full object-cover border border-slate-200"
                             />
                           ) : (

@@ -7,6 +7,7 @@ import PatientReview from "./Components/PatientReview";
 import Footer from "./Components/Footer";
 import ChatWidget from "./Components/ChatWidget";
 import Slider from "./Components/Slider"
+import DeveloperSection from "./Components/DeveloperSection";
 
 function App() {
   return (
@@ -37,11 +38,15 @@ function App() {
         <PatientReview></PatientReview>
       </section>
 
+      <DeveloperSection></DeveloperSection>
+
       <section>
         <Footer></Footer>
       </section>
 
       <ChatWidget></ChatWidget>
+
+      
     </div>
   );
 }
